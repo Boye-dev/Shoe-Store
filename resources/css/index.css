@@ -1,3 +1,557 @@
 body{
+    margin:0;
+    /* background-color: black; */
+}
+.body_dark{
+    background-color: black;
+    height:100%;   
+    width: 100%;
+}
+/* navbar */
+.navbar_body{
+  padding-left: 30px;
+    width:100%;
+    height:80px;
+    background-color: black;
+    box-shadow: 1px 1px 5px 1px rgba(29, 29, 29, 0.301);
+    position: fixed;
+    top:0;
+    display: grid;
+    grid-template-columns: 2.5fr 6fr 3.5fr;
+    z-index: 2;
+
+}
+
+.logo{
+    width:80px;
+    height:80px;
+}
+.links{
+    text-align: center;
+    padding-top: 30px;
+}
+.navbar_contact{
+    text-align: center;
+    padding-top: 20px;
+   
+}
+.contact_us{
+    width:100px;
+    height:40px;
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 60%;
+}
+.nav_link{
+    text-decoration: none;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 11px;
+    color:white;
+    padding: 0px 15px;
+}
+.blur_blue{
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    right:10px;
+    background: #4389d9;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+.blur_red{
+    position: absolute;
+    width: 150px;
+    height: 400px;
+  
+    background: #f76349;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+.blur_blue_popular{
+    position: absolute;
+    width: 135px;
+    height: 300px;
+    left:0;
+    top:70%;
+    background: #4389d9;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+.blur_red_popular{
+    position: absolute;
+    width: 115px;
+    height: 200px;
+    right:10px;
+   top:10px;
+    background: #f76349;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+
+.home_top{
+    display:grid;
+    grid-template-columns: 6fr 6fr;
+    height:100vh;
+    padding: 10% 5% 5%;
+
+}
+.home_top_text{
+   padding-left: 50px;
+   position: relative;
+}
+.home_top_logo{
+    position: absolute;
+    top:0;
+    right:0;
+    width:100px;
+    height:100px;
+}
+.top_text{
+    font-size: 3.8em;
+    font-weight: 700;
+    font-family: 'Lexend Mega', sans-serif;
+    color:white;
+    margin: 30px 0px;
+}
+
+.top_text_short{
+    font-size: 12px;
+    font-weight: 200;
+    width:70%;
+    font-family: 'Lexend Mega', sans-serif;
+    color:white;
+    margin: 30px 0px;
+}
+
+/* popular products */
+.popular{
+    margin-bottom: 12%;
+    position: relative;
+}
+.popular_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 7%;
+    
+}
+
+.popular_head_text{
+    font-size: 1.7em;
+    font-weight: 600;
+    font-family: 'Lexend Mega', sans-serif;
+    color:white;
+}
+.popular_button_main{
+    width:35px;
+    height:35px;
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 60%;
+}
+.popular_content{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    padding:0 7%;
+  grid-gap:1em;
+ 
+   
+}
+.popular_shoe{
+  
+    width:100%;
+    height:350px;
+}
+.popular_image{
+    
+    position: relative;
+width: 100%;
+height:60%;
+border-top-left-radius:8px;
+border-top-right-radius: 8px;
+background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
+}
+.popular_heart{
+  
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:30px;
+    height:30px;
+    border-radius: 100%;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+}
+.popular_rating{
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+}
+.popular_name{
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.popular_price{
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+.popular_cart{
+    background-color: #3B93FF;
+    width:auto;
+    height:30px;
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 50%;
+    cursor:pointer;
+}
+
+/* about */
+
+.about_content{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding:0 7%;
+    margin-bottom: 12%;
+}
+.about_text{
+    color:#ff6451;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    
+}
+.about_text_main{
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 2.3em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.about_sub_text{
+    margin-top:20px;
+    color:rgba(255, 255, 255, 0.808);
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    width:85%;
+}
+.about_button{
+    margin-top:50px;
+    width:180px;
+    height:50px;
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 70%;
+    padding:10px;
+}
+
+/* product */
+.product{
+    position: relative;
+}
+.blur_blue_product{
+    position: absolute;
+    width: 135px;
+    height: 300px;
+    right:10px;
+    top:-50%;
+ 
+    background: #4389d9;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+.blur_red_product{
+    position: absolute;
+    width: 115px;
+    height: 200px;
+    left:0;
+    top:70%;
+    background: #f76349;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+.product_content{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding:0 7%;
+    margin-bottom: 12%;
+}
+.product_text{
+    color:#ff6451;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    
+}
+.product_text_main{
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 2.3em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.product_sub_text{
+    margin-top:20px;
+    color:rgba(255, 255, 255, 0.808);
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    width:85%;
+}
+.product_subs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.product_badge{
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+  margin-right: 5%;
+}
+
+.product_badge_text_main{
+    color:rgba(255, 255, 255, 0.808);
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.product_badge_text{
+    color:rgba(255, 255, 255, 0.808);
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    width:80%
+}
+
+/* customer */
+.customer{
+    padding: 5% 0;
+    background-color: #121414;
+    position: relative;
+}
+.blur_red_customer{
+    position: absolute;
+    width: 115px;
+    height: 800px;
+    right:10px;
+    top:0;
+    background: #f76349;
+    opacity: 0.8;
+    filter: blur(200px);
+    transform: rotate(-0.3deg);
+}
+.customer_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 7%;
+    
+}
+
+.customer_head_text{
+    margin: 0 15px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Lexend Mega', sans-serif;
+    color:white;
+}
+.customer_button_main{
+    width:35px;
+    height:35px;
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 60%;
+}
+
+.customer_content{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding: 5% 5%;
+    margin-bottom: 7%;
+    
+}
+.customer_res{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.customer_image{
+    width:130px;
+    height: 130px;
+    border-radius: 100%;
     background-color: white;
+    margin-bottom: 10%;
+}
+.customer_feedback{
+    text-align: center;
+   padding: 0 10%;
+    font-size: 14px;
+    font-weight: 200;
+    font-family: 'Lexend Mega', sans-serif;
+    color:rgba(255, 255, 255, 0.74);
+}
+.customer_name{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lexend Mega', sans-serif;
+    color: white;
+}
+
+/* newsletter */
+
+.newsletter_head{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    justify-content: space-between;
+    align-items: center;
+    padding:2% 7%;
+    margin-bottom: 2%;
+    
+}
+
+.newsletter_head_text{
+    margin: 0 15px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Lexend Mega', sans-serif;
+    color:white;
+}
+input[type="email"] {
+    color: white;
+    padding: 0 0 0 2%;  
+}
+input[type="email" i]::placeholder {
+    padding-left: 2%;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: 'Lexend Mega', sans-serif;
+    color:white;
+}
+.email{
+    background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
+outline: none;
+border:none;
+width:100%;
+height:50px;
+border-radius: 5px;
+}
+
+.subscribe_button{
+    width:150px;
+    height:50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline:none;
+    border:none;
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+    color:white;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 60%;
+    position: absolute;
+    top:0;
+    right:-4%;
+    cursor: pointer;
+}
+
+/* footer */
+.home_end{
+    position: relative;
+}
+.footer_body{
+    display:grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-gap:2em;
+ 
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+    padding: 5% 10%;
+}
+.blur_blue_footer{
+    position: absolute;
+    width: 135px;
+    height: 200px;
+  bottom:0;
+  left:0;
+ 
+    background: #4389d9;
+    opacity: 0.8;
+    filter: blur(150px);
+    transform: rotate(-0.3deg);
+}
+.footer_text{
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Lexend Mega', sans-serif;
+    color:rgba(255, 255, 255, 0.829);
+    margin-bottom: 20px;
+}
+.footer_handles{
+    margin-top: 5%;
+    display:flex;
+   
+    justify-content: flex-start;
+   
+}
+.footer_main_text{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Lexend Mega', sans-serif;
+    color:rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.footer_social{
+    background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
+width:45px;
+height:45px;
+border-radius: 6px;
+margin-right: 10px;
+}
+
+.copyright{
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Lexend Mega', sans-serif;
+    color:rgb(255, 255, 255);
+    text-align: center;
+
+    padding: 2% 0;
+    margin: 0;
+ 
 }
