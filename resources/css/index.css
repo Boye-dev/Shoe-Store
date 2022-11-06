@@ -2,47 +2,95 @@ body{
     margin:0;
     /* background-color: black; */
 }
+:root {  
+    --clr-dark: black;
+    --clr-light: white;
+    --clr-midblack:#121414;
+    --customer: var(--clr-midblack);
+    --background: var(--clr-dark);
+    --foreground: var(--clr-light);
+  }
+.light-mode{
+    --clr-light: white;
+    --background: var(--clr-light);
+    --clr-dark: black;
+    --clr-midlight:rgb(231, 229, 229);
+    --customer: var(--clr-midlight);
+    --foreground: var(--clr-dark);
+  }
+
 .body_dark{
-    background-color: black;
+    background-color: var(--background);
     height:100%;   
     width: 100%;
+  transition: background-color 1s;
 }
 /* navbar */
+.dark-mode-toggle {
+    z-index: 100;
+    color: var(--foreground);
+    transition: color 1s;
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px; 
+  }
 .navbar_body{
-  padding-left: 30px;
+ 
     width:100%;
     height:80px;
-    background-color: black;
+   
+    background-color: var(--background);
+    
     box-shadow: 1px 1px 5px 1px rgba(29, 29, 29, 0.301);
     position: fixed;
     top:0;
     display: grid;
     grid-template-columns: 2.5fr 6fr 3.5fr;
     z-index: 2;
+    transition: background-color 1s;
 
 }
 
+.navbar_logo{
+    width:100%;
+  text-align: center;
+}
+
 .logo{
-    width:80px;
-    height:80px;
+    width:90px;
+    height:90px;
 }
 .links{
     text-align: center;
     padding-top: 30px;
 }
 .navbar_contact{
-    text-align: center;
-    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
    
 }
+.fa-magnifying-glass{
+    color: var(--foreground);
+    transition: color 1s;
+}
+.fa-cart-shopping{
+    color: var(--foreground);
+    transition: color 1s;
+}
 .contact_us{
-    width:100px;
-    height:40px;
+    width:120px;
+    height:50px;
     border-radius: 5px;
     outline:none;
     border:none;
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
     color:white;
+    cursor: pointer;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 60%;
 }
@@ -50,13 +98,16 @@ body{
     text-decoration: none;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 11px;
-    color:white;
+    color: var(--foreground);
     padding: 0px 15px;
+   
+    cursor: pointer;
+   transition: color 1s;
 }
 .blur_blue{
     position: absolute;
-    width: 150px;
-    height: 400px;
+    width: 120px;
+    height: 300px;
     right:10px;
     background: #4389d9;
     opacity: 0.8;
@@ -65,8 +116,8 @@ body{
 }
 .blur_red{
     position: absolute;
-    width: 150px;
-    height: 400px;
+    width: 120px;
+    height: 300px;
   
     background: #f76349;
     opacity: 0.8;
@@ -109,7 +160,7 @@ body{
 }
 .home_top_logo{
     position: absolute;
-    top:0;
+    top:-5%;
     right:0;
     width:100px;
     height:100px;
@@ -118,16 +169,18 @@ body{
     font-size: 3.8em;
     font-weight: 700;
     font-family: 'Lexend Mega', sans-serif;
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     margin: 30px 0px;
 }
 
 .top_text_short{
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 300;
     width:70%;
     font-family: 'Lexend Mega', sans-serif;
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     margin: 30px 0px;
 }
 
@@ -148,16 +201,19 @@ body{
     font-size: 1.7em;
     font-weight: 600;
     font-family: 'Lexend Mega', sans-serif;
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
 }
 .popular_button_main{
+    cursor: pointer;
     width:35px;
     height:35px;
     border-radius: 5px;
     outline:none;
     border:none;
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 60%;
 }
@@ -175,7 +231,7 @@ body{
     height:350px;
 }
 .popular_image{
-    
+    text-align: center;
     position: relative;
 width: 100%;
 height:60%;
@@ -184,7 +240,7 @@ border-top-right-radius: 8px;
 background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
 }
 .popular_heart{
-  
+  color:white;
     display:flex ;
     align-items: center;
     justify-content: center;
@@ -197,19 +253,22 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
 }
 .popular_rating{
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 12px;
-    font-weight: 100;
+    font-weight: 300;
 }
 .popular_name{
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
 .popular_price{
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 15px;
     font-weight: 600;
@@ -221,7 +280,8 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     border-radius: 5px;
     outline:none;
     border:none;
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 50%;
     cursor:pointer;
@@ -243,7 +303,8 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     
 }
 .about_text_main{
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 2.3em;
     font-weight: 700;
@@ -251,13 +312,15 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
 }
 .about_sub_text{
     margin-top:20px;
-    color:rgba(255, 255, 255, 0.808);
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 12px;
     font-weight: 100;
     width:85%;
 }
 .about_button{
+    cursor: pointer;
     margin-top:50px;
     width:180px;
     height:50px;
@@ -265,7 +328,8 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     outline:none;
     border:none;
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
-    color:white;
+    color: white;
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 70%;
     padding:10px;
@@ -312,7 +376,8 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     
 }
 .product_text_main{
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 2.3em;
     font-weight: 700;
@@ -320,10 +385,11 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
 }
 .product_sub_text{
     margin-top:20px;
-    color:rgba(255, 255, 255, 0.808);
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 12px;
-    font-weight: 100;
+    font-weight: 300;
     width:85%;
 }
 .product_subs{
@@ -340,30 +406,34 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
   margin-right: 5%;
 }
 
+
 .product_badge_text_main{
-    color:rgba(255, 255, 255, 0.808);
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
 .product_badge_text{
-    color:rgba(255, 255, 255, 0.808);
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 12px;
-    font-weight: 100;
+    font-weight: 300;
     width:80%
 }
 
 /* customer */
 .customer{
     padding: 5% 0;
-    background-color: #121414;
+    background-color:var(--customer) ;
+    transition: background-color 1s;
     position: relative;
 }
 .blur_red_customer{
     position: absolute;
-    width: 115px;
-    height: 800px;
+    width: 100px;
+    height: 500px;
     right:10px;
     top:0;
     background: #f76349;
@@ -384,16 +454,19 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     font-size: 2em;
     font-weight: 600;
     font-family: 'Lexend Mega', sans-serif;
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
 }
 .customer_button_main{
+    cursor: pointer;
     width:35px;
     height:35px;
     border-radius: 5px;
     outline:none;
     border:none;
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 60%;
 }
@@ -422,15 +495,17 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     text-align: center;
    padding: 0 10%;
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 300;
     font-family: 'Lexend Mega', sans-serif;
-    color:rgba(255, 255, 255, 0.74);
+    color: var(--foreground);
+    transition: color 1s;
 }
 .customer_name{
     font-size: 20px;
     font-weight: 700;
     font-family: 'Lexend Mega', sans-serif;
-    color: white;
+    color: var(--foreground);
+    transition: color 1s;
 }
 
 /* newsletter */
@@ -450,10 +525,12 @@ background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
     font-size: 2em;
     font-weight: 600;
     font-family: 'Lexend Mega', sans-serif;
-    color:white;
+    color: var(--foreground);
+    transition: color 1s;
 }
 input[type="email"] {
     color: white;
+    transition: color 1s;
     padding: 0 0 0 2%;  
 }
 input[type="email" i]::placeholder {
@@ -461,7 +538,8 @@ input[type="email" i]::placeholder {
     font-size: 10px;
     font-weight: 600;
     font-family: 'Lexend Mega', sans-serif;
-    color:white;
+    color: white;
+    transition: color 1s;
 }
 .email{
     background-image: linear-gradient(95deg,#1C2B3A,#352321,#3D201A);
@@ -480,7 +558,8 @@ border-radius: 5px;
     outline:none;
     border:none;
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
-    color:white;
+    color: white;
+    transition: color 1s;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 60%;
     position: absolute;
@@ -498,8 +577,8 @@ border-radius: 5px;
     grid-template-columns: 3fr 3fr 3fr 3fr;
     grid-gap:2em;
  
-    border-top: 0.5px solid white;
-    border-bottom: 0.5px solid white;
+    border-top: 0.5px solid var(--foreground);
+    border-bottom: 0.5px solid var(--foreground);
     padding: 5% 10%;
 }
 .blur_blue_footer{
@@ -516,9 +595,10 @@ border-radius: 5px;
 }
 .footer_text{
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Lexend Mega', sans-serif;
-    color:rgba(255, 255, 255, 0.829);
+    color: var(--foreground);
+    transition: color 1s;
     margin-bottom: 20px;
 }
 .footer_handles{
@@ -532,7 +612,8 @@ border-radius: 5px;
     font-size: 15px;
     font-weight: 500;
     font-family: 'Lexend Mega', sans-serif;
-    color:rgb(255, 255, 255);
+    color: var(--foreground);
+    transition: color 1s;
     margin-bottom: 20px;
 }
 
@@ -540,15 +621,22 @@ border-radius: 5px;
     background-image: linear-gradient(100deg,#5295EB,#A180A8,#DE6E6F,#F96657);
 width:45px;
 height:45px;
+display: flex;
+justify-content: center;
+align-items: center;
 border-radius: 6px;
 margin-right: 10px;
 }
-
+.fa-square-facebook, .fa-square-instagram, .fa-square-twitter{
+    color:white;
+   font-size: 1.5em;
+}
 .copyright{
     font-size: 12px;
     font-weight: 300;
     font-family: 'Lexend Mega', sans-serif;
-    color:rgb(255, 255, 255);
+    color: var(--foreground);
+    transition: color 1s;
     text-align: center;
 
     padding: 2% 0;

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script
+      src="https://kit.fontawesome.com/56e64f4edd.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -8,30 +12,45 @@
       href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/56e64f4edd.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="../resources/css/index.css" />
     <title>Shoe Store</title>
   </head>
   <body>
-    <div class="body_dark">
+    <div id="body-dark" class="body_dark">
       <!-- navbar -->
       <nav>
-        <div class="navbar_body">
-          <div>
+        <div id="nav_body" class="navbar_body">
+          <div class="navbar_logo">
             <img src="../resources/images/nike2.png" class="logo" />
           </div>
           <div class="links">
             <a href="#" class="nav_link">Home</a>
-            <a href="#" class="nav_link">About</a>
-            <a href="#" class="nav_link">Product</a>
-            <a href="#" class="nav_link">Testimonial</a>
+            <a href="#about" class="nav_link">About</a>
+            <a href="#product" class="nav_link">Product</a>
+            <a href="#testimonial" class="nav_link">Testimonial</a>
             <a href="#" class="nav_link">Shop</a>
           </div>
           <div class="navbar_contact">
-            <i class="fa-regular fa-cart-shopping" style="color: #243c64"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button id="dark-mode-toggle" class="dark-mode-toggle">
+              <svg
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 496"
+              >
+                <path
+                  fill="currentColor"
+                  d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                  transform="translate(-8 -8)"
+                />
+              </svg>
+            </button>
             <button class="contact_us">Contact Us</button>
           </div>
         </div>
@@ -51,12 +70,13 @@
                 The styles of shoe available to consumers are endless and profit
                 also endless
               </p>
-              <button class="contact_us">Shop Now</button>
+              <button class="contact_us">
+                Shop Now <i class="fa-solid fa-circle-arrow-right"></i>
+              </button>
             </div>
           </div>
           <div>
             <p>Helo</p>
-            >
           </div>
         </div>
       </section>
@@ -68,16 +88,21 @@
             Popular <span style="color: #ff6451">Products</span>
           </p>
           <div>
-            <button class="popular_button_main"><</button>
+            <button class="popular_button_main">
+              <i class="fa-solid fa-arrow-left" style="font-size: 1.5em"></i>
+            </button>
             <button class="popular_button_main" style="margin-left: 10px">
-              >
+              <i class="fa-solid fa-arrow-right" style="font-size: 1.5em"></i>
             </button>
           </div>
         </div>
         <div class="popular_content">
           <div class="popular_shoe">
             <div class="popular_image">
-              <div class="popular_heart">💖</div>
+              <img src="../resources/images/nikeshoe1.png" style="width: 90%" />
+              <div class="popular_heart">
+                <i class="fa-regular fa-heart"></i>
+              </div>
             </div>
             <p class="popular_rating">⭐ (4.5)</p>
             <p class="popular_name">Nke Air Jordan-100</p>
@@ -96,7 +121,9 @@
           </div>
           <div class="popular_shoe">
             <div class="popular_image">
-              <div class="popular_heart">💖</div>
+              <div class="popular_heart">
+                <i class="fa-regular fa-heart"></i>
+              </div>
             </div>
             <p class="popular_rating">⭐ (4.5)</p>
             <p class="popular_name">Nke Air Jordan-100</p>
@@ -115,7 +142,9 @@
           </div>
           <div class="popular_shoe">
             <div class="popular_image">
-              <div class="popular_heart">💖</div>
+              <div class="popular_heart">
+                <i class="fa-regular fa-heart"></i>
+              </div>
             </div>
             <p class="popular_rating">⭐ (4.5)</p>
             <p class="popular_name">Nke Air Jordan-100</p>
@@ -134,7 +163,9 @@
           </div>
           <div class="popular_shoe">
             <div class="popular_image">
-              <div class="popular_heart">💖</div>
+              <div class="popular_heart">
+                <i class="fa-regular fa-heart"></i>
+              </div>
             </div>
             <p class="popular_rating">⭐ (4.5)</p>
             <p class="popular_name">Nke Air Jordan-100</p>
@@ -146,7 +177,7 @@
               "
             >
               <p class="popular_price">$20.20</p>
-              <button class="popular_cart" style="margin-left: 10px">
+              <button id="about" class="popular_cart" style="margin-left: 10px">
                 Add To Cart
               </button>
             </div>
@@ -172,7 +203,9 @@
               Et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
               exercitation ullamco laboris nisi ut aliquip ex ea commodo con
             </p>
-            <button class="about_button">Explore More</button>
+            <button class="about_button" id="product">
+              Explore More <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -192,8 +225,11 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua ut
               commodo con.
             </p>
+
             <div class="product_subs">
-              <div class="product_badge"></div>
+              <div class="product_badge">
+                <i class="fa-regular fa-badge-check"></i>
+              </div>
               <div>
                 <p class="product_badge_text_main">Best Quality Shoes</p>
                 <p class="product_badge_text">
@@ -203,10 +239,12 @@
               </div>
             </div>
             <div class="product_subs">
-              <div class="product_badge"></div>
+              <div class="product_badge">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
               <div>
                 <p class="product_badge_text_main">Best Giving Prices</p>
-                <p class="product_badge_text">
+                <p class="product_badge_text" id="testimonial">
                   Quis autem vel eum iure reprehenderit qui in ea voluptate
                   velit esse quam nihil molestiae.
                 </p>
@@ -227,9 +265,11 @@
             </p>
           </div>
           <div>
-            <button class="customer_button_main"><</button>
+            <button class="customer_button_main">
+              <i class="fa-solid fa-arrow-left" style="font-size: 1.5em"></i>
+            </button>
             <button class="customer_button_main" style="margin-left: 10px">
-              >
+              <i class="fa-solid fa-arrow-right" style="font-size: 1.5em"></i>
             </button>
           </div>
         </div>
@@ -280,9 +320,15 @@
             <img src="../resources/images/nike2.png" class="logo" />
             <p class="footer_text">Lorem ipsum dolor sit amet, consectetur</p>
             <div class="footer_handles">
-              <div class="footer_social"></div>
-              <div class="footer_social"></div>
-              <div class="footer_social"></div>
+              <div class="footer_social">
+                <i class="fa-brands fa-square-facebook"></i>
+              </div>
+              <div class="footer_social">
+                <i class="fa-brands fa-square-instagram"></i>
+              </div>
+              <div class="footer_social">
+                <i class="fa-brands fa-square-twitter"></i>
+              </div>
             </div>
           </div>
           <div class="footer_quicklinks">
@@ -314,5 +360,6 @@
         <p class="copyright">© 2022 Group 3. All rights reserved.</p>
       </footer>
     </div>
+    <script src="../resources/js/index.js"></script>
   </body>
 </html>
