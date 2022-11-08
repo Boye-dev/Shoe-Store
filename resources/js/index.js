@@ -38,3 +38,38 @@ darkModeToggle.addEventListener("click", () => {
     disableLightMode();
   }
 });
+
+// Add or remove a unit from an item
+let remove_copy = document.getElementById("remove_copy");
+let add_copy = document.getElementById("add_copy");
+
+add_copy.addEventListener("click", addCopy);
+remove_copy.addEventListener("click", removeCopy);
+let num;
+
+function addCopy(e) {
+  num = parseInt(num_copies.textContent);
+  num = num + 1;
+  num_copies.textContent = num;
+}
+
+function removeCopy(e) {
+  num = parseInt(num_copies.textContent);
+  if (num >= 2) {
+    num = num - 1;
+    num_copies.textContent = num;
+  }
+}
+
+// Cart show or hide functionality
+let cart = document.getElementById("cartID");
+let nav_reveal = document.getElementById("nav_reveal");
+let nav_reveal1 = document.getElementById("nav_reveal1");
+
+nav_reveal.addEventListener("click", cartReveal);
+nav_reveal1.addEventListener("click", cartReveal);
+
+function cartReveal() {
+  cart.classList.toggle("nav_show");
+  console.log(cart.classList);
+}
