@@ -40,24 +40,46 @@ darkModeToggle.addEventListener("click", () => {
 });
 
 // Add or remove a unit from an item
-let remove_copy = document.getElementById("remove_copy");
-let add_copy = document.getElementById("add_copy");
+let remove_copy1 = document.getElementById("remove_copy1");
+let add_copy1 = document.getElementById("add_copy1");
+let remove_copy2 = document.getElementById("remove_copy2");
+let add_copy2 = document.getElementById("add_copy2");
 
-add_copy.addEventListener("click", addCopy);
-remove_copy.addEventListener("click", removeCopy);
+add_copy1.addEventListener("click", addCopy1);
+add_copy2.addEventListener("click", addCopy2);
+remove_copy1.addEventListener("click", removeCopy1);
+remove_copy2.addEventListener("click", removeCopy2);
+
+let num_copies1 = document.getElementById("num_copies1");
+let num_copies2 = document.getElementById("num_copies2");
+
 let num;
 
-function addCopy(e) {
-  num = parseInt(num_copies.textContent);
+function addCopy1(e) {
+  num = parseInt(num_copies1.textContent);
   num = num + 1;
-  num_copies.textContent = num;
+  num_copies1.textContent = num;
 }
 
-function removeCopy(e) {
-  num = parseInt(num_copies.textContent);
+function addCopy2(e) {
+  num = parseInt(num_copies2.textContent);
+  num = num + 1;
+  num_copies2.textContent = num;
+}
+
+function removeCopy1(e) {
+  num = parseInt(num_copies1.textContent);
   if (num >= 2) {
     num = num - 1;
-    num_copies.textContent = num;
+    num_copies1.textContent = num;
+  }
+}
+
+function removeCopy2(e) {
+  num = parseInt(num_copies2.textContent);
+  if (num >= 2) {
+    num = num - 1;
+    num_copies2.textContent = num;
   }
 }
 
@@ -71,5 +93,15 @@ nav_reveal1.addEventListener("click", cartReveal);
 
 function cartReveal() {
   cart.classList.toggle("nav_show");
-  console.log(cart.classList);
+}
+
+// Search button functionality
+
+let shoe_search = document.getElementById("shoe_search");
+let search_box = document.getElementById("search_box");
+
+shoe_search.addEventListener("click", searchClicked);
+
+function searchClicked(e) {
+  search_box.classList.toggle("search_show");
 }

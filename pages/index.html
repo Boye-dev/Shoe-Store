@@ -36,7 +36,11 @@
             <a href="#" class="nav_link">Shop</a>
           </div>
           <div class="navbar_contact">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i
+              class="fa-solid fa-magnifying-glass"
+              id="shoe_search"
+              style="cursor: pointer"
+            ></i>
             <i
               class="fa-solid fa-cart-shopping"
               id="nav_reveal"
@@ -61,6 +65,22 @@
       </nav>
       <div class="blur_blue"></div>
       <div class="blur_red"></div>
+
+      <section>
+        <div class="search_container" id="search_box">
+          <form action="">
+            <input
+              type="text"
+              placeholder="Search.."
+              name="search"
+              class="search_input"
+            />
+            <button type="submit" class="search_button">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </section>
 
       <section>
         <div class="cart" id="cartID">
@@ -112,11 +132,11 @@
                     <small class="item_price">$50.99</small>
                   </div>
                   <div>
-                    <button type="button" class="" id="remove_copy">
+                    <button type="button" class="" id="remove_copy1">
                       <i class="fa-solid fa-minus"></i>
                     </button>
-                    <span id="num_copies" style="padding: 10px">1</span>
-                    <button type="button" class="" id="add_copy">
+                    <span id="num_copies1" style="padding: 10px">1</span>
+                    <button type="button" class="" id="add_copy1">
                       <i class="fa-solid fa-add"></i>
                     </button>
                   </div>
@@ -153,11 +173,11 @@
                     <small class="item_price">$89.99</small>
                   </div>
                   <div>
-                    <button type="button" class="" id="remove_copy">
+                    <button type="button" class="" id="remove_copy2">
                       <i class="fa-solid fa-minus"></i>
                     </button>
-                    <span id="num_copies" style="padding: 10px">1</span>
-                    <button type="button" class="" id="add_copy">
+                    <span id="num_copies2" style="padding: 10px">1</span>
+                    <button type="button" class="" id="add_copy2">
                       <i class="fa-solid fa-add"></i>
                     </button>
                   </div>
