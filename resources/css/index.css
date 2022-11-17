@@ -169,10 +169,13 @@ body {
   transition: color 1s;
   margin: 30px 0px;
 }
-.home_top_image{
+.home_top_image {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+.hero_image {
+  width: 90%;
 }
 .top_text_short {
   font-size: 12px;
@@ -239,16 +242,14 @@ body {
 .images_show:hover .img_shoe {
   padding: 2%;
   transform: scalex(1);
-  cursor:pointer;
+  cursor: pointer;
 }
-.img_shoe{
+.img_shoe {
   width: 95%;
-   transform: scalex(-1);
-  transition: transform 0.1s ;
-
+  transform: scalex(-1);
+  transition: transform 0.1s;
 }
-.img_shoe:hover{
- 
+.img_shoe:hover {
 }
 .popular_heart {
   color: white;
@@ -672,13 +673,13 @@ input[type="email" i]::placeholder {
 }
 
 .nav_show {
-    visibility: visible;
-    right: 20px;
-  }
+  visibility: visible;
+  right: 20px;
+}
 
 .svg_color {
   fill: var(--foreground);
-  transition: fill 1s;;
+  transition: fill 1s;
 }
 
 .close_cart_button {
@@ -788,28 +789,28 @@ input[type="email" i]::placeholder {
 }
 
 .sub_price {
-    display: flex;
-    justify-content: right;
+  display: flex;
+  justify-content: right;
 }
 
 .sub_price > p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .even_sub_price {
-    width: 70px;
+  width: 70px;
 }
 
 .cart_next_button {
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    background-image: linear-gradient(100deg, #5295eb, #a180a8, #de6e6f, #f96657);
-    color: white;
-    cursor: pointer;
-    font-family: "Lexend Mega", sans-serif;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(100deg, #5295eb, #a180a8, #de6e6f, #f96657);
+  color: white;
+  cursor: pointer;
+  font-family: "Lexend Mega", sans-serif;
 }
 
 .cart_next_button_div {
@@ -853,10 +854,98 @@ input[type="email" i]::placeholder {
   border: 0;
   width: 33px;
   height: 33px;
-  background-color:#3b93ff;
+  background-color: #3b93ff;
   color: white;
 }
 
 /* End of Search Functionality */
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+  .home_top {
+    display: block;
+  }
+
+  .home_top_image {
+    height: 300px;
+  }
+
+  .hero_image {
+    margin-top: 20px;
+    width: 55%;
+  }
+
+  .popular_content {
+    grid-template-columns: 3fr 3fr;
+  }
+
+  .popular_head {
+    margin-top: 150px;
+  }
+
+  .img_shoe {
+    width: 60%;
+  }
+
+  .about_nike_shoe {
+    width: 70%;
+  }
+
+  .about_content {
+    display: block;
+  }
+
+  .product_content {
+    display: block;
+  }
+
+  .product_details_img {
+    width: 80%;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  .nav_hidden {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+  }
+
+  .links_1 {
+    display: none;
+  }
+
+  .navbar_body_1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  .navbar_logo_1 {
+    width: 50px;
+  }
+
+  .navbar_contact_1 {
+    width: 50%;
+  }
+
+  .newsletter_head {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .footer_body {
+    display: block;
+  }
+
+  .footer_links_top {
+    margin-top: 30px;
+  }
+}
+
+/* End of Responsivess */
 
 /* End of Fortune's style */

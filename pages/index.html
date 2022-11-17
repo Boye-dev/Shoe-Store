@@ -23,19 +23,19 @@
   <body>
     <div id="body-dark" class="body_dark">
       <!-- navbar -->
-      <nav>
-        <div id="nav_body" class="navbar_body">
-          <div class="navbar_logo">
-            <img src="../resources/images/nike2.png" class="logo" />
+      <nav class="pos-sticky">
+        <div id="nav_body" class="navbar_body navbar_body_1">
+          <div class="navbar_logo navbar_logo_1">
+            <img id="nike_button" src="../resources/images/nike2.png" class="logo" />
           </div>
-          <div class="links">
+          <div class="links links_1">
             <a href="#" class="nav_link">Home</a>
             <a href="#about" class="nav_link">About</a>
             <a href="#product" class="nav_link">Product</a>
             <a href="#testimonial" class="nav_link">Testimonial</a>
             <a href="#" class="nav_link">Shop</a>
           </div>
-          <div class="navbar_contact">
+          <div class="navbar_contact navbar_contact_1">
             <i
               class="fa-solid fa-magnifying-glass"
               id="shoe_search"
@@ -236,7 +236,7 @@
             </div>
           </div>
           <div class="home_top_image">
-            <img src="../resources/images/mainshoe.png" style="width: 90%" />
+            <img class="hero_image" src="../resources/images/mainshoe.png" />
           </div>
         </div>
       </section>
@@ -362,6 +362,7 @@
         <div class="about_content">
           <div style="padding-left: 5%">
             <img
+              class="about_nike_shoe"
               src="../resources/images/shoe9.png"
               style="transform: rotate(40deg)"
             />
@@ -429,8 +430,8 @@
               </div>
             </div>
           </div>
-          <div style="padding-right: 5%">
-            <img src="../resources/images/shoe10.png" />
+          <div style="padding-right: 5%" >
+            <img class="product_details_img" src="../resources/images/shoe10.png" />
           </div>
         </div>
       </section>
@@ -510,7 +511,7 @@
             </p>
             <p class="newsletter_head_text">& Newsletter</p>
           </div>
-          <div style="position: relative">
+          <div style="position: relative; margin-top: 30px;">
             <input type="email" placeholder="Type Your Email" class="email" />
             <button class="subscribe_button">Subscribe Now</button>
           </div>
@@ -519,7 +520,7 @@
 
       <footer class="home_end">
         <div class="footer_body">
-          <div style="width: 80%">
+          <div style="width: 80%" class="footer_links_top">
             <img src="../resources/images/nike2.png" class="logo" />
             <p class="footer_text">Lorem ipsum dolor sit amet, consectetur</p>
             <div class="footer_handles">
@@ -534,7 +535,7 @@
               </div>
             </div>
           </div>
-          <div class="footer_quicklinks">
+          <div class="footer_quicklinks footer_links_top" >
             <p class="footer_main_text">Find product</p>
             <p class="footer_text">Brownze Arnold</p>
             <p class="footer_text">Chronograph Blue</p>
@@ -542,7 +543,7 @@
             <p class="footer_text">Cooperate Shoes</p>
             <p class="footer_text">Air Force</p>
           </div>
-          <div class="footer_quicklinks">
+          <div class="footer_quicklinks footer_links_top">
             <p class="footer_main_text">Get help</p>
             <p class="footer_text">About Us</p>
             <p class="footer_text">Contact Us</p>
@@ -550,7 +551,7 @@
             <p class="footer_text">Privacy Policy</p>
             <p class="footer_text">Payment Policy</p>
           </div>
-          <div class="footer_quicklinks">
+          <div class="footer_quicklinks footer_links_top">
             <p class="footer_main_text">About Us</p>
             <p class="footer_text">News</p>
             <p class="footer_text">Service</p>

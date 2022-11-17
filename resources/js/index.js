@@ -105,3 +105,16 @@ shoe_search.addEventListener("click", searchClicked);
 function searchClicked(e) {
   search_box.classList.toggle("search_show");
 }
+
+// Nike Button for Navbar drop
+
+let nike_button = document.getElementById("nike_button");
+let mob_nav = document.getElementById("mob_nav");
+let nav_body = document.getElementById("nav_body");
+
+nike_button = addEventListener("click", nikeClicked);
+
+function nikeClicked(e) {
+  mob_nav.style.display = "block";
+  
+}
