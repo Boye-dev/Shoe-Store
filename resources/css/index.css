@@ -186,6 +186,22 @@ body {
   transition: color 1s;
   margin: 30px 0px;
 }
+@media only screen and (max-width:899px){
+  .home_top {
+ 
+    grid-template-columns: 12fr;
+    padding: 10% 1% 5%;
+  }
+  
+  .home_top_image{
+    display: none;
+   
+  }
+  .top_text {
+    font-size:200%;
+   
+  }
+}
 
 /* popular products */
 .popular {
@@ -345,7 +361,12 @@ body {
   font-size: 70%;
   padding: 10px;
 }
-
+button{
+  transition: transform 0.5s;
+}
+button:hover{
+  transform: scale(1.2);
+}
 /* product */
 .product {
   position: relative;
@@ -890,6 +911,7 @@ input[type="email" i]::placeholder {
 
   .about_nike_shoe {
     width: 70%;
+    display: none;
   }
 
   .about_content {
@@ -902,6 +924,7 @@ input[type="email" i]::placeholder {
 
   .product_details_img {
     width: 80%;
+    display: none;
   }
 
   .d-none {
